@@ -440,9 +440,9 @@ function class_dungeonGen()
 		for _, tile in pairs(tiles:getAllTiles(enums.empty)) do
 			-- must be odd number position
 			local pos = tile.position;
-			if pos.x % 2 == 1 and pos.y % 2 == 1 then
+			if pos.x % 2 == 1 and pos.y % 2 == 1 and tile.enum == enums.empty then
 				growMaze(pos);
-				break;
+				--break;
 			end;
 		end;
 		
